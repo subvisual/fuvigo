@@ -3,17 +3,12 @@
 source 'https://rubygems.org'
 
 gem 'middleman', '~>3.3.7'
-gem 'slim'
-gem 'bourbon'
-gem 'neat'
-gem 'bitters'
-gem 'middleman-gh-pages'
 
-# Live-reloading plugin
-gem 'middleman-livereload', '~> 3.1.0'
-
-# For faster file watcher updates on Windows:
-gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
-
-# Windows does not come with time zone data
-gem 'tzinfo-data', platforms: [:mswin, :mingw]
+group :development do
+  gem 'bitters'
+  gem 'bourbon'
+  gem 'middleman-gh-pages'
+  gem 'middleman-livereload', '~> 3.1.0'
+  gem 'neat'
+  gem 'slim'
+end
