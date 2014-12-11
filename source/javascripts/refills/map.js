@@ -6,7 +6,7 @@ function initialize() {
     center: mapCenter,
     zoom: 14,
     scrollwheel: false,
-    draggable: true,
+    draggable: false,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
@@ -29,10 +29,10 @@ function initialize() {
     '<div id="content">'+
     '<div id="siteNotice">'+
     '</div>'+
-    '<h1 id="firstHeading" class="firstHeading">Fundação Viera Gomes</h1>'+
+    '<h1 id="firstHeading" class="firstHeading">Fundação Vieira Gomes</h1>'+
     '<div id="bodyContent">'+
-    '<p>Algures</p>'+
-    '<p>Braga</p>'+
+    '<p>Rua Costa Gomes, nº32</p>'+
+    '<p>Real, 4700 - 262 Braga</p>'+
     '<p>Portugal</p>'+
     '</div>'+
     '</div>';
@@ -45,7 +45,7 @@ function initialize() {
   var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      title: 'Fundação Viera Gomes'
+      title: 'Fundação Vieira Gomes'
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
