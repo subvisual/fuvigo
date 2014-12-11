@@ -6,6 +6,7 @@ gem 'middleman', '~>3.3.7'
 
 gem 'bitters'
 gem 'bourbon'
+gem 'jquery-middleman'
 gem 'middleman-gh-pages'
 gem 'middleman-livereload', github: 'middleman/middleman-livereload'
 gem 'neat'
