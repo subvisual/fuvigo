@@ -1,0 +1,1 @@
+(function(){$(function(){return new hashgrid})}).call(this);
