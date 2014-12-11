@@ -9,28 +9,78 @@ html
     <!-- Use title if it's in the page YAML frontmatter -->
     title = current_page.data.title || "Fuvigo"
 
-    = stylesheet_link_tag "normalize", "all"
+    = stylesheet_link_tag "normalize", "all", "hashgrid"
+    = javascript_include_tag  "jquery.min"
     = javascript_include_tag  "all"
+    = javascript_include_tag  "hashgrid"
+    = javascript_include_tag  "map"
+    = javascript_include_tag  "https://maps.googleapis.com/maps/api/js"
+
 
   body class="#{page_classes}"
-    header.centered-navigation
-      .centered-navigation-wrapper
-        a href="" class="centered-navigation-menu-button" MENU
-        ul.centered-navigation-menu
-          li.nav-link
-            a href="#" Products
-          li.nav-link
-            a href="#" About Us
-          li.nav-link
-            a href="#" Contact
-          li.nav-link.logo
-            a href="#" class="logo" FUVIGO
-          li class="nav-link"
-            a href="#" Testimonials
-          li class="nav-link"
-            a href="#" History
-          li class="nav-link"
-            a href="#" Sign up
-
+    header.navigation
+      .navigation-wrapper
+        a.logo href="javascript:void(0)" 
+          img alt=("Logo Image") src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" /
+        a#js-mobile-menu.navigation-menu-button href=""  MENU
+        .nav
+          ul#navigation-menu
+            li.nav-link
+              a href="javascript:void(0)"  Products
+            li.nav-link
+              a href="javascript:void(0)"  About Us
+            li.nav-link
+              a href="javascript:void(0)"  Contact
+            li.nav-link.more
+              a href="javascript:void(0)"  More
+              ul.submenu
+                li
+                  a href="javascript:void(0)"  Submenu Item
+                li
+                  a href="javascript:void(0)"  Another Item
+                li.more
+                  a href="javascript:void(0)"  Item with submenu
+                  ul.submenu
+                    li
+                      a href="javascript:void(0)"  Sub-submenu Item
+                    li
+                      a href="javascript:void(0)"  Another Item
+                li.more
+                  a href="javascript:void(0)"  Another submenu
+                  ul.submenu
+                    li
+                      a href="javascript:void(0)"  Sub-submenu
+                    li
+                      a href="javascript:void(0)"  An Item
     .containter
       = yield
+
+    .wrapper-for-content-outside-of-footer
+      footer.footer-2
+        .footer-logo
+          img alt=("Logo image") src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" /
+        ul
+          li
+            a href="javascript:void(0)"  About
+          li
+            a href="javascript:void(0)"  Contact
+          li
+            a href="javascript:void(0)"  Products
+        .footer-secondary-links
+          ul
+            li
+              a href="javascript:void(0)"  Terms and Conditions
+            li
+              a href="javascript:void(0)"  Privacy Policy
+          ul.footer-social
+            li
+              a href="javascript:void(0)" 
+                img alt="Facebook" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" /
+            li
+              a href="javascript:void(0)" 
+                img alt="Twitter" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" /
+            li
+              a href="javascript:void(0)" 
+                img alt="YouTube" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" /
+
+
