@@ -1,10 +1,10 @@
 function initialize() {
-  var myLatlng = new google.maps.LatLng(41.54545, -8.42651);
-  var mapCenter = new google.maps.LatLng(41.54545, -8.42651);
+  var myLatlng = new google.maps.LatLng(41.55388, -8.44065);
+  var mapCenter = new google.maps.LatLng(41.55388, -8.44065);
   var mapCanvas = document.getElementById('map_canvas');
   var mapOptions = {
     center: mapCenter,
-    zoom: 13,
+    zoom: 14,
     scrollwheel: false,
     draggable: true,
     disableDefaultUI: true,
