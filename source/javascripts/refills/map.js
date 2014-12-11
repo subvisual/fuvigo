@@ -6,7 +6,7 @@ function initialize() {
     center: mapCenter,
     zoom: 14,
     scrollwheel: false,
-    draggable: true,
+    draggable: false,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
