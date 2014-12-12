@@ -1,1 +1,1 @@
-(function(){$(function(){return new hashgrid,$(".anchor").waypoint(function(){var n,i;return i=$("#navigation-menu"),n=i.find("a[href*='"+this.id+"']").parent(),i.find("li").removeClass("active-nav-item"),n.addClass("active-nav-item")})})}).call(this);
+(function(){$(function(){return hashgrid&&new hashgrid,$(".anchor").waypoint(function(){var n,i;return i=$("#navigation-menu"),n=i.find("a[href*='"+this.id+"']").parent(),i.find("li").removeClass("active-nav-item"),n.addClass("active-nav-item")})})}).call(this);
