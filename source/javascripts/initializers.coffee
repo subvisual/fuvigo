@@ -1,5 +1,6 @@
 $ ->
-  new hashgrid
+  if hashgrid
+    new hashgrid
 
   $('.anchor').waypoint ->
     $menu = $('#navigation-menu')
