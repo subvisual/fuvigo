@@ -1,3 +1,11 @@
-.my-simple-gallery
-  figure
-    @include span-columns(3)
+.my-simple-gallery figure
+  @include span-columns(6)
+  @include media(max-width $medium-screen)
+    @include omega(2n)
+  @include media($medium-screen)
+    @include span-columns(4)
+    @include omega(3n)
+
+  img
+    height: 200px
+    width: 300px

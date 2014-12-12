@@ -3,15 +3,18 @@ $ ->
   menuToggle = $('#js-mobile-menu')
   signUp = $('.sign-up')
 
-  $(menuToggle).on 'click', (e) ->
-    e.preventDefault()
+  toggleMenu = ->
     menu.slideToggle ->
       if(menu.is(':hidden'))
         menu.removeAttr('style')
 
+  $(menuToggle).on 'click', (e) ->
+    e.preventDefault()
+    toggleMenu()
 
   # underline under the active nav item
   $(".nav .nav-link").click ->
+    toggleMenu()
     $(".nav .nav-link").each ->
       $(this).removeClass("active-nav-item")
 

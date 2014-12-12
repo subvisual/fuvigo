@@ -1,5 +1,7 @@
 #= require jquery
-#= require_tree ./vendor
+#= require vendor/photoswipe
+#= require vendor/photoswipe-ui-default
+#= require vendor/waypoints
 #= require initializers
 #= require photoswipe_init
 #= require refills/navigation
