@@ -16,50 +16,11 @@ html
     link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Montserrat+Alternates:400,700|Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'
 
   body class="#{page_classes}"
-    header.navigation
-      .navigation-wrapper
-        = link_to "/index.html", class: 'logo' do
-          = image_tag 'logo.png', alt: 'Fuvigo logo'
-        a#js-mobile-menu.navigation-menu-button href=""  MENU
-        .nav
-          ul#navigation-menu
-            li.nav-link
-              a href="javascript:void(0)" Missão
-            li.nav-link
-              a href="javascript:void(0)" Testemunhos
-            li.nav-link
-              a href="javascript:void(0)" A Fundação
-            li.nav-link
-              a href="javascript:void(0)" Onde Estamos
-            li.nav-link
-              a href="#contacts" Contactos
+    = partial "header"
 
     .containter
       = yield
 
+    = partial "footer"
 
-    footer#contacts class="footer"
-      div class="footer-links"
-        ul
-          li
-            h3 Contactos
-          li = link_to "https://www.google.pt/maps/place/R.+Costa+Gomes+32,+4700+Braga/@41.5543,-8.4412932,17z/data=!3m1!4b1!4m2!3m1!1s0xd24ff1e101bc115:0x530f192d619833b5", target: '_blank' do
-            span
-              | Rua Costa Gomes, nº32,
-              br
-              | Real, 4700 - 262 Braga
-          br
-          li
-            span 253 307 315
-          li = mail_to "geral@fuvigo.com"
-
-        ul
-          li
-            h3 Follow Us
-          li
-            a href="https://www.facebook.com/fundacaovieiragomes.fvg" target='_blank' Facebook
-
-      hr
-
-      p Fundação Vieira Gomes
-      p &copy;2015 Todos os Direitos Reservados
+    = partial "photoswipe"
